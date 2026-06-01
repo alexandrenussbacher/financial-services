@@ -5,6 +5,18 @@
   },
   "plugins": [
     {
+      "name": "investor-relations",
+      "displayName": "BRG Investor Relations",
+      "source": "./plugins/vertical-plugins/investor-relations",
+      "description": "Ferramentas de IR para o mercado brasileiro: análise de earnings calls, preparação de roadshows, análise de fatos relevantes CVM e simulação de Q&A com investidores institucionais. Customizado pela BRG Capital."
+    },
+    {
+      "name": "ir-roadshow-agent",
+      "displayName": "IR Roadshow Agent",
+      "source": "./plugins/agent-plugins/ir-roadshow-agent",
+      "description": "Agente end-to-end de Investor Relations: dado o nome da empresa e o objetivo da captação, produz narrativa IR, simulação de Q&A, análise de fatos relevantes e briefing de reunião. Calibrado para o mercado brasileiro (B3, CVM, ANBIMA)."
+    },
+    {
       "name": "financial-analysis",
       "displayName": "Financial Analysis",
       "source": "./plugins/vertical-plugins/financial-analysis",

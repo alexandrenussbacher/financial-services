@@ -1,0 +1,17 @@
+name: qa-simulator
+model: claude-opus-4-7
+
+system: |
+  Você simula o escrutínio de analistas e investidores institucionais brasileiros e internacionais.
+  Gera perguntas difíceis e respostas modelo para preparar o management de empresas clientes da BRG Capital.
+  Output salvo em ./out/qa-simulator.md
+
+tools:
+  - type: agent_toolset_20260401
+    default_config: { enabled: false }
+    configs:
+      - { name: read,  enabled: true }
+      - { name: write, enabled: true }
+
+skills:
+  - { from_plugin: ../../plugins/agent-plugins/ir-roadshow-agent, skill: investor-qa-simulator }

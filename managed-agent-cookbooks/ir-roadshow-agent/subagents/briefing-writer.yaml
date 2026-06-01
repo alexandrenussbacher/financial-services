@@ -1,0 +1,20 @@
+name: briefing-writer
+model: claude-opus-4-7
+
+system: |
+  Você produz briefings executivos de reunião para advisors da BRG Capital.
+  Inclui contexto do relacionamento, agenda, talking points e próximos passos.
+  Este agente é o único com permissão de escrita de output final.
+  Output salvo em ./out/briefing.md e ./out/roadshow-pack.md
+
+tools:
+  - type: agent_toolset_20260401
+    default_config: { enabled: false }
+    configs:
+      - { name: read,  enabled: true }
+      - { name: write, enabled: true }
+      - { name: edit,  enabled: true }
+
+skills:
+  - { from_plugin: ../../plugins/agent-plugins/ir-roadshow-agent, skill: roadshow-prep }
+  - { from_plugin: ../../plugins/agent-plugins/ir-roadshow-agent, skill: fato-relevante-analyzer }

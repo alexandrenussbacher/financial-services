@@ -1,0 +1,30 @@
+# IR Roadshow Agent — managed-agent cookbook
+# BRG Capital customization of anthropics/financial-services
+
+name: ir-roadshow-agent
+model: claude-opus-4-7
+
+system:
+  file: ../../plugins/agent-plugins/ir-roadshow-agent/agents/ir-roadshow-agent.md
+  append: "Você está rodando headless. Produza os artefatos em ./out/. Todos os outputs são rascunhos para revisão do advisor sênior da BRG Capital."
+
+tools:
+  - type: agent_toolset_20260401
+    default_config: { enabled: false }
+    configs:
+      - { name: read,  enabled: true }
+      - { name: grep,  enabled: true }
+      - { name: glob,  enabled: true }
+
+# Opcional: conectar ao FMP (Financial Modeling Prep) MCP server — gratuito
+# para dados de empresas brasileiras listadas na B3
+# mcp_servers:
+#   - { type: url, name: fmp, url: "${FMP_MCP_URL}" }
+
+skills:
+  - { from_plugin: ../../plugins/agent-plugins/ir-roadshow-agent }
+
+callable_agents:
+  - { manifest: ./subagents/narrative-writer.yaml }
+  - { manifest: ./subagents/qa-simulator.yaml }
+  - { manifest: ./subagents/briefing-writer.yaml }
