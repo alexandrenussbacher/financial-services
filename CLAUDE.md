@@ -1,4 +1,21 @@
-# Financial Services Plugins
+# BRG IR Intelligence — Financial Services Plugins
+
+Fork de `anthropics/financial-services` customizado para **Investor Relations no mercado brasileiro** pela **BRG Capital**.
+
+> Comandos rápidos: `/earnings` · `/roadshow` · `/fato-relevante` · `/qa-prep`
+
+---
+
+## Comandos BRG IR (novos neste fork)
+
+| Comando | O que faz |
+|---------|-----------|
+| `/earnings [ticker]` | Analisa earnings call ou release de resultados de empresa brasileira |
+| `/roadshow [empresa] [tipo] [investidor]` | Prepara pacote completo de roadshow |
+| `/fato-relevante` | Analisa comunicado CVM sob ótica do investidor institucional |
+| `/qa-prep [empresa] [contexto]` | Simula escrutínio de analistas para preparar o management |
+
+---
 
 Cowork plugins and Claude Managed Agent templates for financial services. Each named agent ships two ways from one source.
 
