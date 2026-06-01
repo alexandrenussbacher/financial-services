@@ -1,20 +1,8 @@
 {
   "name": "investor-relations",
   "version": "1.0.0",
-  "displayName": "BRG Investor Relations",
-  "description": "Ferramentas de Investor Relations para a BRG Capital: análise de earnings calls brasileiros, preparação de roadshows, análise de fatos relevantes e simulação de Q&A com investidores institucionais.",
-  "author": "BRG Capital / Alexandre Nussbacher",
-  "basedon": "anthropics/financial-services",
-  "skills": [
-    { "name": "earnings-analysis-br", "path": "./skills/earnings-analysis-br/SKILL.md" },
-    { "name": "roadshow-prep", "path": "./skills/roadshow-prep/SKILL.md" },
-    { "name": "fato-relevante", "path": "./skills/fato-relevante/SKILL.md" },
-    { "name": "investor-qa", "path": "./skills/investor-qa/SKILL.md" }
-  ],
-  "commands": [
-    { "name": "earnings", "path": "./commands/earnings.md" },
-    { "name": "roadshow", "path": "./commands/roadshow.md" },
-    { "name": "fato-relevante", "path": "./commands/fato-relevante.md" },
-    { "name": "qa-prep", "path": "./commands/qa-prep.md" }
-  ]
+  "description": "BRG Capital IR tools for the Brazilian market: earnings analysis, roadshow prep, CVM filings, and investor Q&A simulation",
+  "author": {
+    "name": "Alexandre Nussbacher"
+  }
 }

@@ -1,0 +1,8 @@
+{
+  "name": "ir-roadshow-agent",
+  "version": "1.0.0",
+  "description": "End-to-end IR agent for Brazilian capital markets: equity story, investor Q&A simulation, CVM filings analysis, and meeting briefing. Built for BRG Capital.",
+  "author": {
+    "name": "Alexandre Nussbacher"
+  }
+}
